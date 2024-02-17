@@ -1,0 +1,131 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: 'Josefin Sans', sans-serif; 
+		overflow-x: hidden;
+	}
+	.icon{
+		width: 44px;
+	}
+	.header{
+		text-align: center;
+		display: flex;
+		align-items: center;
+		background: #EEE;
+	}
+	.download-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 4px;
+    width: 200px;
+    background: transparent;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, orange, purple)1;
+    font-size: 14px;
+}
+	.download{
+		text-align: center;
+	}
+	.menu-icon{
+		font-size: 18px;
+		margin-left: 12px;
+	}
+	.scroll-bar {
+      display: none; 
+      background-color: #f2f2f2;
+      padding: 5px;
+      border: 1px solid #ccc;
+      position: absolute;
+      top: 50px;
+      left: 0;
+    }
+    .scroll-icon {
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    .menu-icon {
+      cursor: pointer;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .link{
+    	margin-left: 14px;
+    	font-size: 14px;
+    }
+    #section1 {
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+    #section2,#section3{
+    	margin-bottom: 20px;
+    }
+    .text{
+    	font-size: 14px;
+    	margin-left: 32px;
+    }
+    .bold{
+    	margin-left: 119px;
+    }
+</style>
+<div class="header">
+	<div class="menu-icon" onclick="toggleMenuBar()">&#9776;</div>
+	<div class="scroll-bar" id="scrollBar">
+    <div class="scroll-icon" onclick="scrollToSection('section1')">Download</div>
+    <div class="scroll-icon" onclick="scrollToSection('section2')">Today's Offer:-</div>
+    <div class="scroll-icon" onclick="scrollToSection('section3')">Using Steps:-</div>
+  </div>
+	<img src="https://i.ibb.co/98NcGMY/icon.png" class="icon" onclick="reload()">
+</div>
+<div class="download" id="section1">
+	<a href="RahulBookPoint.apk" download="RahulBookPoint">
+    <button class="download-btn">Download App</button>
+</a>
+</div><hr style="margin-top: 150px;">
+<div id="section2">
+	<h3 style="margin-top: 20px; margin-left: 10px;">Offer:-</h3>
+	<li class="link">Make Purchase Of More Than 300 And Recieve Free Delivery.</li>
+	<li class="link">Buy More Than ₹500 Get Chance To Win A Gift.</li>
+	<li class="link">Buy 5 Register Size SPS Copy 192 Pages And Win a Top Copy.</li>
+</div><hr>
+<div id="section3">
+	<h3 style="margin-top: 20px; margin-left: 10px;">How To Use:-</h3>
+	<li class="link"><b>Step 1:-</b>Open Rahul Book Point Application.</li>
+	<li class="link"><b>Step 2:</b>-Select Brands Or Category.</li><b class="bold">OR</b>
+	<p class="text">Search You're Product Name.</p>
+	<li class="link"><b>Step 3:-</b>Select Modals./ If You Search Then Skip This Part.</li>
+	<li class="link"><b>Step 4:-</b>Add Products To Cart.</li>
+	<li class="link"><b>Step 5:-</b>Click On Three Dots And Open Cart.</li>
+	<li class="link"><b>Step 6:-</b>In Cart Click On Next Button.</li>
+	<li class="link"><b>Step 7:-</b>Fill Your Details And CLick On Place Order.</li>
+	<li class="link"><b>Step 8:-</b>Order Placed.</li>
+</div><hr>
+<script>
+	function reload(){
+		location.reload()
+	}
+</script>
+<script>
+    // Function to toggle the visibility of the scroll bar
+    function toggleMenuBar() {
+      var scrollBar = document.getElementById('scrollBar');
+      if (scrollBar.style.display === 'none') {
+        scrollBar.style.display = 'block';
+      } else {
+        scrollBar.style.display = 'none';
+      }
+    }
+
+    // Function to scroll to a specific section
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
